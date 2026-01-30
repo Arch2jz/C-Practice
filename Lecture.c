@@ -226,3 +226,37 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a;
+
+//     printf("enter a");
+//     scanf("%d", &a);
+
+//     if (a = 20)
+//         printf("inside if\n");
+
+//     printf("value of a=%d", a);
+//     printf("\noutside of if block");
+
+//     return 0;
+// }
+#include <stdio.h>
+
+int main()
+{
+    int a;
+
+    printf("enter a");
+    scanf("%d", &a);
+
+    if (!a){
+       printf("inside if\n");
+    }
+    printf("value of a=%d", a);
+    printf("\noutside of if block");
+
+    return 0;
+}
