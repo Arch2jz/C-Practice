@@ -243,20 +243,46 @@
 
 //     return 0;
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    int a;
+// int main()
+// {
+//     int a;
 
-    printf("enter a");
-    scanf("%d", &a);
+//     printf("enter a");
+//     scanf("%d", &a);
 
-    if (!a){
-       printf("inside if\n");
-    }
-    printf("value of a=%d", a);
-    printf("\noutside of if block");
+//     if (!a){
+//        printf("inside if\n");
+//     }
+//     printf("value of a=%d", a);
+//     printf("\noutside of if block");
 
-    return 0;
-}
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     if (!printf(""))
+//         printf("okkkk");
+//     else
+//         printf("Hiii");    
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int a =10;
+//     if(a==10){
+//         printf("Hello....");
+//         break; //noooooo dont use break
+//         printf("Ok");
+//     }
+//     else{
+//         printf("hi");
+//     }
+
+
+
+//     return 0;
+// }
