@@ -76,7 +76,7 @@
 // }
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // int sum (int a , int b){
 //     return a + b;
@@ -163,15 +163,66 @@
 //     printf("a-- : %d\n" , a--);
 //     return 0;
 // }
-#include <stdio.h>
-int main(){
-    int a;
-    printf("enter a\n");
-    scanf("%d",&a);
-    if (a){
-        printf ("inside if\n");
-    }
-    printf("outside\n ");
+// #include <stdio.h>
+// int main(){
+//     int a;
+//     printf("enter a\n");
+//     scanf("%d",&a);
+//     if (a){
+//         printf ("inside if\n");
+//     }
+//     printf("outside\n ");
 
-    return 0;
-}
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+
+//     int a;
+//     printf("%d", & a);
+//     if (a);
+//     printf("inside if \n");
+//     printf("\n value of a =%d",a);
+//     printf("\n outside of if block");
+    
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a;
+
+//     printf("enter a");
+//     scanf("%d", &a);
+
+//     if (a > 20){
+//         printf("inside if\n");
+//     }
+
+//     printf("value of a=%d", a);
+//     printf("\n outside of if block");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a;
+
+//     printf("enter a");
+//     scanf("%d", &a);
+
+//     if (a > 20)
+//         printf("inside if\n");
+
+//     printf("\n value of a=%d", a);
+//     printf("\n outside of if block");
+
+//     return 0;
+// }
