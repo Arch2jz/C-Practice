@@ -286,3 +286,52 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main() {
+//     int marks;
+
+//     printf("Enter marks: ");
+//     scanf("%d", &marks);
+
+//     if (marks > 100 || marks < 0) {
+//         printf("Invalid marks\n");
+//     }
+//     else if (marks >= 75) {
+//         printf("Grade A\n");
+//     }
+//     else if (marks >= 50) {
+//         printf("Grade B\n");
+//     }
+//     else if (marks == 0) {
+//         printf("Grade D\n");
+//     }
+//     else if (marks < 35) {
+//         printf("Grade C\n");
+//     }
+//     else {
+//         printf("Passed but no grade category\n");
+//     }
+
+//     return 0;
+// }
+#include <stdio.h>
+
+int main() {
+    int number1, number2;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
+
+    if (number1 == number2) {
+        printf("Result: %d = %d", number1, number2);
+    }
+    else if (number1 > number2) {
+        printf("Result: %d > %d", number1, number2);
+    }
+    else {
+        printf("Result: %d < %d", number1, number2);
+    }
+
+    return 0;
+}
