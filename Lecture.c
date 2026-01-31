@@ -315,23 +315,59 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int main() {
+//     int number1, number2;
+
+//     printf("Enter two integers: ");
+//     scanf("%d %d", &number1, &number2);
+
+//     if (number1 == number2) {
+//         printf("Result: %d = %d", number1, number2);
+//     }
+//     else if (number1 > number2) {
+//         printf("Result: %d > %d", number1, number2);
+//     }
+//     else {
+//         printf("Result: %d < %d", number1, number2);
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+
+//     double base ;
+//     printf("enter the base: ");
+//     scanf("%lf",&base);
+
+//     double height;
+//     printf("enter the height: ");
+//     scanf("%lf",&height);
+
+//     double area = 0.5 * base * height;
+//     printf ("%lf", area);
+
+//     return 0;
+// }
+
 #include <stdio.h>
 
 int main() {
-    int number1, number2;
+    int num, rev = 0;
 
-    printf("Enter two integers: ");
-    scanf("%d %d", &number1, &number2);
+    printf("Enter a 5 digit number: ");
+    scanf("%d", &num);
 
-    if (number1 == number2) {
-        printf("Result: %d = %d", number1, number2);
+    while (num != 0) {
+        rev = rev * 10 + (num % 10);
+        num = num / 10;
     }
-    else if (number1 > number2) {
-        printf("Result: %d > %d", number1, number2);
-    }
-    else {
-        printf("Result: %d < %d", number1, number2);
-    }
+
+    printf("Reversed number = %d\n", rev);
 
     return 0;
 }
+
