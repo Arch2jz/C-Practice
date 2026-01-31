@@ -353,21 +353,32 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// int main() {
+//     int num, rev = 0;
+
+//     printf("Enter a 5 digit number: ");
+//     scanf("%d", &num);
+
+//     while (num != 0) {
+//         rev = rev * 10 + (num % 10);
+//         num = num / 10;
+//     }
+
+//     printf("Reversed number = %d\n", rev);
+
+//     return 0;
+// }
+
 #include <stdio.h>
+#include <unistd.h>
+int main(){
+    fork();
+    fork() && fork()||fork();
+    fork();
+    printf("forked\n");
 
-int main() {
-    int num, rev = 0;
-
-    printf("Enter a 5 digit number: ");
-    scanf("%d", &num);
-
-    while (num != 0) {
-        rev = rev * 10 + (num % 10);
-        num = num / 10;
-    }
-
-    printf("Reversed number = %d\n", rev);
 
     return 0;
 }
-
