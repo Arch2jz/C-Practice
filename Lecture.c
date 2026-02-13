@@ -367,18 +367,19 @@
 //     }
 
 //     printf("Reversed number = %d\n", rev);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <unistd.h>
+// int main(){
+//     fork();
+//     fork() && fork()||fork();
+//     fork();
+//     printf("forked\n");
+
 
 //     return 0;
 // }
 
 #include <stdio.h>
-#include <unistd.h>
-int main(){
-    fork();
-    fork() && fork()||fork();
-    fork();
-    printf("forked\n");
-
-
-    return 0;
-}
