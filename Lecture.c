@@ -452,6 +452,104 @@
 //     }
 // }
 
+// #include <stdio.h>
+
+// int main() {
+//     int n, i;
+
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("Enter %d elements:\n", n);
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     int largest = arr[0];   // Assume first element is largest
+
+//     for(i = 1; i < n; i++) {
+//         if(arr[i] > largest) {
+//             largest = arr[i];
+//         }
+//     }
+
+//     printf("Largest element = %d\n", largest);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+//------------------------------------------------------------------------------------------------reverse an array
+// int main() {
+//     int n, i;
+
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("Enter %d elements:\n", n);
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     // Reversing array
+//     int start = 0, end = n - 1, temp;
+
+//     while(start < end) {
+//         temp = arr[start];
+//         arr[start] = arr[end];
+//         arr[end] = temp;
+
+//         start++;
+//         end--;
+//     }
+
+//     printf("Reversed array:\n");
+//     for(i = 0; i < n; i++) {
+//         printf("%d ", arr[i]);
+//     }
+
+//     return 0;
+// }
+//-------------------------------------------------------------------search an arrangement in array that is lenear search-------------------------------------------------------------
+// #include <stdio.h>
+
+// int main() {
+//     int n, i, key;
+
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("Enter %d elements:\n", n);
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     printf("Enter element to search: ");
+//     scanf("%d", &key);
+
+//     int found = 0;
+
+//     for(i = 0; i < n; i++) {
+//         if(arr[i] == key) {
+//             printf("Element found at position %d\n", i + 1);
+//             found = 1;
+//             break;
+//         }
+//     }
+
+//     if(!found) {
+//         printf("Element not found\n");
+//     }
+
+//     return 0;
+// }
+//-------------------------------------------------------------------------------------------------------------------count even odd numbers in aray--------------------------------------------------------------------
 #include <stdio.h>
 
 int main() {
@@ -467,15 +565,18 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    int largest = arr[0];   // Assume first element is largest
+    int even = 0, odd = 0;
 
-    for(i = 1; i < n; i++) {
-        if(arr[i] > largest) {
-            largest = arr[i];
+    for(i = 0; i < n; i++) {
+        if(arr[i] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
         }
     }
 
-    printf("Largest element = %d\n", largest);
+    printf("Total Even numbers = %d\n", even);
+    printf("Total Odd numbers = %d\n", odd);
 
     return 0;
 }
