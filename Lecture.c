@@ -382,4 +382,100 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int arr[5]= {2,4,8,17,16};
+//     printf ("%d",arr[2]);
+//     printf ("%d",arr[4]);
+//     printf ("%d",arr[0]);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int i = 0;
+//     int marks [5];
+//     marks[0]= 80;
+//     marks [1] = 60;
+//     marks [2] = 70;
+//     marks [3] = 85;
+//     marks [4] = 75;
+//     for (i=0;i<5;i++){
+//         printf ("%d\n",marks[i]);
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int arr[5]= {2,4,8,12,16};
+//     printf("Printing array elemnets\n");
+//     for (int i= 0;i<5;i++){
+//         printf("%d",arr[i]);
+
+//     }
+//     printf("\n");
+//     printf("printing array in reverse\n");
+//     for (int i = 4; i >= 0; i--){
+//         printf("%d", arr[i]);
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// void main()
+// {
+//     int i, j, temp;
+
+//     int a[10] = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
+
+//     for (i = 0; i < 10; i++)
+//     {
+//         for (j = i + 1; j < 10; j++)
+//         {
+//             if (a[j] < a[i])
+//             {
+//                 temp = a[i];
+//                 a[i] = a[j];
+//                 a[j] = temp;
+//             }
+//         }
+//     }
+
+//     printf("Printing Sorted Element List...\n");
+
+//     for (i = 0; i < 10; i++)
+//     {
+//         printf("%d ", a[i]);
+//     }
+// }
+
 #include <stdio.h>
+
+int main() {
+    int n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int largest = arr[0];   // Assume first element is largest
+
+    for(i = 1; i < n; i++) {
+        if(arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    printf("Largest element = %d\n", largest);
+
+    return 0;
+}
