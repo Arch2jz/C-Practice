@@ -550,33 +550,104 @@
 //     return 0;
 // }
 //-------------------------------------------------------------------------------------------------------------------count even odd numbers in aray--------------------------------------------------------------------
+// #include <stdio.h>
+
+// int main() {
+//     int n, i;
+
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("Enter %d elements:\n", n);
+//     for(i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     int even = 0, odd = 0;
+
+//     for(i = 0; i < n; i++) {
+//         if(arr[i] % 2 == 0) {
+//             even++;
+//         } else {
+//             odd++;
+//         }
+//     }
+
+//     printf("Total Even numbers = %d\n", even);
+//     printf("Total Odd numbers = %d\n", odd);
+
+//     return 0;
+// }
+// -------------------------------------------------------------------------------------------------------2d array
+#include <stdio.h>
+int main(){
+    // int table[2][3] = {0,0,0,1,1,1};
+    // int table [2][3] = {{0,0,0},{1,1,1}};
+    int table [2][3] = {
+        {0,0,0},
+        {1,1,1} 
+        };
+        return 0;
+    }
+//-------------------------------------------------------------------------------------------2d array access elements
+#include <stdio.h>
+int main (){
+    int matrix [2][3] = {{1,4,2},{3,6,8}};
+    printf ("%d",matrix [0][1]);
+    return 0;
+}
+//-----------------------------------------------------------------------------------------------Change element of an array
+#include <stdio.h>
+int main (){
+    int matrix [2][3] = {{1,4,2},{3,6,8}};
+    matrix [0][0] = 90;
+    printf ("%d",matrix [0][0]);
+    return 0;
+}
+
+//------------------------------------------------------------------------------------------------------elements print karwane hai
+#include <stdio.h>
+int main (){
+    int matrix [2][3] = {{1,4,2},{3,6,8}};
+    int i,j;
+    for (i =0;i<2;i++){
+
+        for (j =0;j<2;j++){
+            printf ("%d",matrix[i][j]);
+        }
+    }
+    return 0;
+}
+// -----------------------------------------------------------------------------------------Storing elements in a matrix and printing it
 #include <stdio.h>
 
-int main() {
-    int n, i;
+int main() 
+{
+    int arr[3][3], i, j;
 
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
-
-    int arr[n];
-
-    printf("Enter %d elements:\n", n);
-    for(i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    int even = 0, odd = 0;
-
-    for(i = 0; i < n; i++) {
-        if(arr[i] % 2 == 0) {
-            even++;
-        } else {
-            odd++;
+    // Taking input
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("Enter a[%d][%d]: ", i, j);
+            scanf("%d", &arr[i][j]);
         }
     }
 
-    printf("Total Even numbers = %d\n", even);
-    printf("Total Odd numbers = %d\n", odd);
+    // Printing the matrix
+    printf("\nPrinting the elements...\n");
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("\n");
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d\t", arr[i][j]);
+        }
+    }
 
     return 0;
 }
