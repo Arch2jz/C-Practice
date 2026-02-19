@@ -580,73 +580,42 @@
 
 //     return 0;
 // }
-// -------------------------------------------------------------------------------------------------------2d array
-#include <stdio.h>
-int main(){
-    // int table[2][3] = {0,0,0,1,1,1};
-    // int table [2][3] = {{0,0,0},{1,1,1}};
-    int table [2][3] = {
-        {0,0,0},
-        {1,1,1} 
-        };
-        return 0;
-    }
-//-------------------------------------------------------------------------------------------2d array access elements
-#include <stdio.h>
-int main (){
-    int matrix [2][3] = {{1,4,2},{3,6,8}};
-    printf ("%d",matrix [0][1]);
-    return 0;
-}
-//-----------------------------------------------------------------------------------------------Change element of an array
-#include <stdio.h>
-int main (){
-    int matrix [2][3] = {{1,4,2},{3,6,8}};
-    matrix [0][0] = 90;
-    printf ("%d",matrix [0][0]);
-    return 0;
-}
+// 
 
-//------------------------------------------------------------------------------------------------------elements print karwane hai
-#include <stdio.h>
-int main (){
-    int matrix [2][3] = {{1,4,2},{3,6,8}};
-    int i,j;
-    for (i =0;i<2;i++){
-
-        for (j =0;j<2;j++){
-            printf ("%d",matrix[i][j]);
-        }
-    }
-    return 0;
-}
-// -----------------------------------------------------------------------------------------Storing elements in a matrix and printing it
 #include <stdio.h>
 
-int main() 
+
+int main()
 {
-    int arr[3][3], i, j;
+    int SIZE;
+    printf("Enter size of square matrix: ");
+    scanf("%d", &SIZE);
 
-    // Taking input
-    for (i = 0; i < 3; i++)
+    int ARR1[SIZE][SIZE], ARR2[SIZE][SIZE], C[SIZE][SIZE];
+    int row, col;
+
+    printf("Enter elements of Matrix 1:\n");
+    for (row = 0; row < SIZE; row++)
+        for (col = 0; col < SIZE; col++)
+            scanf("%d", &ARR1[row][col]);
+
+    printf("Enter elements of Matrix 2:\n");
+    for (row = 0; row < SIZE; row++)
+        for (col = 0; col < SIZE; col++)
+            scanf("%d", &ARR2[row][col]);
+
+    // Adding matrices
+    for (row = 0; row < SIZE; row++)
+        for (col = 0; col < SIZE; col++)
+            C[row][col] = ARR1[row][col] + ARR2[row][col];
+
+    // Printing result
+    printf("\nSum of matrices:\n");
+    for (row = 0; row < SIZE; row++)
     {
-        for (j = 0; j < 3; j++)
-        {
-            printf("Enter a[%d][%d]: ", i, j);
-            scanf("%d", &arr[i][j]);
-        }
-    }
-
-    // Printing the matrix
-    printf("\nPrinting the elements...\n");
-
-    for (i = 0; i < 3; i++)
-    {
+        for (col = 0; col < SIZE; col++)
+            printf("%4d", C[row][col]);
         printf("\n");
-        for (j = 0; j < 3; j++)
-        {
-            printf("%d\t", arr[i][j]);
-        }
     }
 
     return 0;
