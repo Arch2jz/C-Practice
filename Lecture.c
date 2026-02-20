@@ -582,41 +582,191 @@
 // }
 // 
 
+// #include <stdio.h>
+
+
+// int main()
+// {
+//     int SIZE;
+//     printf("Enter size of square matrix: ");
+//     scanf("%d", &SIZE);
+
+//     int ARR1[SIZE][SIZE], ARR2[SIZE][SIZE], C[SIZE][SIZE];
+//     int row, col;
+
+//     printf("Enter elements of Matrix 1:\n");
+//     for (row = 0; row < SIZE; row++)
+//         for (col = 0; col < SIZE; col++)
+//             scanf("%d", &ARR1[row][col]);
+
+//     printf("Enter elements of Matrix 2:\n");
+//     for (row = 0; row < SIZE; row++)
+//         for (col = 0; col < SIZE; col++)
+//             scanf("%d", &ARR2[row][col]);
+
+//     // Adding matrices
+//     for (row = 0; row < SIZE; row++)
+//         for (col = 0; col < SIZE; col++)
+//             C[row][col] = ARR1[row][col] + ARR2[row][col];
+
+//     // Printing result
+//     printf("\nSum of matrices:\n");
+//     for (row = 0; row < SIZE; row++)
+//     {
+//         for (col = 0; col < SIZE; col++)
+//             printf("%4d", C[row][col]);
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int x;
+//     printf("enter the number for the triangle: ");
+//     scanf("%d",&x);
+
+//     for (int i = 0;i<x;i++){
+//         for (int j =0; j<i+1;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+// #include <stdio.h>
+// int main(){
+//     int x;
+//     printf("enter the number for the triangle: ");
+//     scanf("%d",&x);
+
+//     for (int i = 1; i <= x; i++){
+
+//         // print spaces
+//         for (int j = 1; j <= x - i; j++){
+//             printf("  ");
+//         }
+
+//         // print stars
+//         for (int k = 1; k <= i; k++){
+//             printf("* ");
+//         }
+
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int i, j;
+
+//     for(i = 1; i <= 6; i++) {
+//         for(j = 1; j <= 6; j++) {
+//             printf("%-5d", i * j);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
 #include <stdio.h>
 
 
-int main()
-{
-    int SIZE;
-    printf("Enter size of square matrix: ");
-    scanf("%d", &SIZE);
+int main() {
+    int arr[100], n = 0;
+    int choice, pos, value, i, found;
 
-    int ARR1[SIZE][SIZE], ARR2[SIZE][SIZE], C[SIZE][SIZE];
-    int row, col;
+    do {
+        printf("\n--- MENU ---\n");
+        printf("1. Insert\n");
+        printf("2. Update\n");
+        printf("3. Delete\n");
+        printf("4. Display\n");
+        printf("5. Search\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
-    printf("Enter elements of Matrix 1:\n");
-    for (row = 0; row < SIZE; row++)
-        for (col = 0; col < SIZE; col++)
-            scanf("%d", &ARR1[row][col]);
+        switch(choice) {
 
-    printf("Enter elements of Matrix 2:\n");
-    for (row = 0; row < SIZE; row++)
-        for (col = 0; col < SIZE; col++)
-            scanf("%d", &ARR2[row][col]);
+            case 1:  // Insert
+                printf("Enter position: ");
+                scanf("%d", &pos);
+                printf("Enter value: ");
+                scanf("%d", &value);
 
-    // Adding matrices
-    for (row = 0; row < SIZE; row++)
-        for (col = 0; col < SIZE; col++)
-            C[row][col] = ARR1[row][col] + ARR2[row][col];
+                if(pos >= 1 && pos <= n+1) {
+                    for(i = n; i >= pos-1; i--)
+                        arr[i+1] = arr[i];
 
-    // Printing result
-    printf("\nSum of matrices:\n");
-    for (row = 0; row < SIZE; row++)
-    {
-        for (col = 0; col < SIZE; col++)
-            printf("%4d", C[row][col]);
-        printf("\n");
-    }
+                    arr[pos-1] = value;
+                    n++;
+                } else {
+                    printf("Invalid Position!\n");
+                }
+                break;
+
+            case 2:  // Update
+                printf("Enter position to update: ");
+                scanf("%d", &pos);
+
+                if(pos >= 1 && pos <= n) {
+                    printf("Enter new value: ");
+                    scanf("%d", &arr[pos-1]);
+                } else {
+                    printf("Invalid Position!\n");
+                }
+                break;
+
+            case 3:  // Delete
+                printf("Enter position to delete: ");
+                scanf("%d", &pos);
+
+                if(pos >= 1 && pos <= n) {
+                    for(i = pos-1; i < n-1; i++)
+                        arr[i] = arr[i+1];
+
+                    n--;
+                } else {
+                    printf("Invalid Position!\n");
+                }
+                break;
+
+            case 4:  // Display
+                printf("Array elements: ");
+                for(i = 0; i < n; i++)
+                    printf("%d ", arr[i]);
+                break;
+
+            case 5:  // Search
+                printf("Enter value to search: ");
+                scanf("%d", &value);
+
+                found = 0;
+                for(i = 0; i < n; i++) {
+                    if(arr[i] == value) {
+                        printf("Found at position %d\n", i+1);
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if(!found)
+                    printf("Element not found\n");
+                break;
+
+            case 6:
+                printf("Exiting...\n");
+                break;
+
+            default:
+                printf("Invalid choice!\n");
+        }
+
+    } while(choice != 6);
 
     return 0;
 }
