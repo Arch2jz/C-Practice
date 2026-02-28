@@ -672,101 +672,446 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+
+// int main() {
+//     int arr[100], n = 0;
+//     int choice, pos, value, i, found;
+
+//     do {
+//         printf("\n--- MENU ---\n");
+//         printf("1. Insert\n");
+//         printf("2. Update\n");
+//         printf("3. Delete\n");
+//         printf("4. Display\n");
+//         printf("5. Search\n");
+//         printf("6. Exit\n");
+//         printf("Enter your choice: ");
+//         scanf("%d", &choice);
+
+//         switch(choice) {
+
+//             case 1:  // Insert
+//                 printf("Enter position: ");
+//                 scanf("%d", &pos);
+//                 printf("Enter value: ");
+//                 scanf("%d", &value);
+
+//                 if(pos >= 1 && pos <= n+1) {
+//                     for(i = n; i >= pos-1; i--)
+//                         arr[i+1] = arr[i];
+
+//                     arr[pos-1] = value;
+//                     n++;
+//                 } else {
+//                     printf("Invalid Position!\n");
+//                 }
+//                 break;
+
+//             case 2:  // Update
+//                 printf("Enter position to update: ");
+//                 scanf("%d", &pos);
+
+//                 if(pos >= 1 && pos <= n) {
+//                     printf("Enter new value: ");
+//                     scanf("%d", &arr[pos-1]);
+//                 } else {
+//                     printf("Invalid Position!\n");
+//                 }
+//                 break;
+
+//             case 3:  // Delete
+//                 printf("Enter position to delete: ");
+//                 scanf("%d", &pos);
+
+//                 if(pos >= 1 && pos <= n) {
+//                     for(i = pos-1; i < n-1; i++)
+//                         arr[i] = arr[i+1];
+
+//                     n--;
+//                 } else {
+//                     printf("Invalid Position!\n");
+//                 }
+//                 break;
+
+//             case 4:  // Display
+//                 printf("Array elements: ");
+//                 for(i = 0; i < n; i++)
+//                     printf("%d ", arr[i]);
+//                 break;
+
+//             case 5:  // Search
+//                 printf("Enter value to search: ");
+//                 scanf("%d", &value);
+
+//                 found = 0;
+//                 for(i = 0; i < n; i++) {
+//                     if(arr[i] == value) {
+//                         printf("Found at position %d\n", i+1);
+//                         found = 1;
+//                         break;
+//                     }
+//                 }
+
+//                 if(!found)
+//                     printf("Element not found\n");
+//                 break;
+
+//             case 6:
+//                 printf("Exiting...\n");
+//                 break;
+
+//             default:
+//                 printf("Invalid choice!\n");
+//         }
+
+//     } while(choice != 6);
+
+//     return 0;
+// }
+//-----------------------------------------------------------------------------------------------------String practice
+
+// #include <stdio.h>
+// int main(){
+
+// char str[25];
+// printf("Enter string: ");
+// scanf("%24s", str);
+
+// int length = 0;
+// while (str[length] != '\0') {
+//     length++;
+// }
+
+// printf("String length is %d\n", length);
+
+// return 0;
+// }
+
+// #include <stdio.h>
+
+// int main() 
+// {
+//     char str[100];
+//     int i = 0;
+
+//     printf("Enter string: ");
+//     scanf("%s", str);   // no & needed for array name
+
+//     while (str[i] != '\0')
+//     {
+//         i++;
+//     }
+
+//     printf("String length = %d", i);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+//     char str[25];
+//     printf("enter the string");
+//     scanf("%24s",&str);
+//     printf("%s" ,strrev(str));
+
+// return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+
+// int main() {
+
+//     char str1[25];
+//     printf("Enter string: ");
+//     scanf("%s",&str1);   
+//     strcat(str1,"ming");
+//     printf("value of str2 is : %s",str1);
+// }
+// #include <stdio.h>
+// #include <string.h>
+// int main() {
+//     char str1 = "Hello";
+//     char str2 = "hello";
+
+//     int result = stricmp(str1, str2);
+
+//     if (result < 0) {
+//         printf("'%s' is less than '%s'\n", str1, str2);
+//     } else if (result > 0) {
+//         printf("'%s' is greater than '%s'\n", str1, str2);
+//     } else {
+//         printf("'%s' and '%s' are the same (case - insensitive)\n", str1, str2);
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int i, j;
+
+//     for(i = 1; i <= 6; i++) {
+//         for(j = 1; j <= 6; j++) {
+//             printf("%-5d", i * j);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// // Function to calculate sum of array elements
+// int sumArray(int arr[], int size) {
+//     int sum = 0;
+    
+//     for(int i = 0; i < size; i++) {
+//         sum += arr[i];
+//     }
+    
+//     return sum;
+// }
+
+// #include <stdio.h>
+
+// // Function to calculate sum of array elements
+// int sumArray(int arr[], int size) {
+//     int sum = 0;
+    
+//     for(int i = 0; i < size; i++) {
+//         sum += arr[i];
+//     }
+    
+//     return sum;
+// }
+
+// int main() {
+//     int n;
+
+//     printf("Enter number of elements: ");
+//     scanf("%d", &n);
+
+//     int arr[n];
+
+//     printf("Enter %d elements:\n", n);
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     int result = sumArray(arr, n);
+
+//     printf("Sum of array elements = %d\n", result);
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int r1, c1, r2, c2;
+
+//     printf("Enter rows and columns of first matrix: ");
+//     scanf("%d %d", &r1, &c1);
+
+//     printf("Enter rows and columns of second matrix: ");
+//     scanf("%d %d", &r2, &c2);
+
+//     if (c1 != r2) {
+//         printf("Matrix multiplication not possible!\n");
+//         return 0;
+//     }
+
+//     int A[r1][c1], B[r2][c2], result[r1][c2];
+
+//     printf("Enter elements of first matrix:\n");
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c1; j++) {
+//             scanf("%d", &A[i][j]);
+//         }
+//     }
+
+//     printf("Enter elements of second matrix:\n");
+//     for(int i = 0; i < r2; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             scanf("%d", &B[i][j]);
+//         }
+//     }
+
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             result[i][j] = 0;
+//         }
+//     }
+
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             for(int k = 0; k < c1; k++) {
+//                 result[i][j] += A[i][k] * B[k][j];
+//             }
+//         }
+//     }
+
+//     printf("Resultant Matrix:\n");
+//     for(int i = 0; i < r1; i++) {
+//         for(int j = 0; j < c2; j++) {
+//             printf("%d ", result[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int rows, cols;
+
+//     printf("Enter number of rows and columns: ");
+//     scanf("%d %d", &rows, &cols);
+
+//     int matrix[10][10], transpose[10][10];
+
+//     printf("Enter elements of matrix:\n");
+//     for(int i = 0; i < rows; i++) {
+//         for(int j = 0; j < cols; j++) {
+//             scanf("%d", &matrix[i][j]);
+//         }
+//     }
+
+//     for(int i = 0; i < rows; i++) {
+//         for(int j = 0; j < cols; j++) {
+//             transpose[j][i] = matrix[i][j];
+//         }
+//     }
+
+//     printf("Transpose of the matrix:\n");
+//     for(int i = 0; i < cols; i++) {
+//         for(int j = 0; j < rows; j++) {
+//             printf("%d ", transpose[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main (){
+
+//     int num1;
+//     int sum;
+
+//     printf("Enter the number of nums: ");
+//     scanf("%d",&num1);
+//     int arr[50];
+
+//     printf("Enter the nums: ");
+//     for (int i = 0; i < num1; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     printf("Enter the lucky pair sum: ");
+//     scanf("%d",&sum);
+
+    // int found = 0;
+    // for (int i = 0; i < num1 - 1; i++) {
+    //     for (int j = i + 1; j < num1; j++) {
+    //         if (arr[i] + arr[j] == sum) {
+    //             printf("Lucky pair found: %d, %d\n", arr[i], arr[j]);
+    //             found = 1;
+//             }
+//         }
+//     }
+//     if (!found){
+//         printf("No lucky pair found\n");
+//     }
+
+//     return 0;
+// }
+
+
+// a system records numerical consecutive days  each value maybe +ve -ve or +ve value = +ve outcome -ve = -ve outcome wp to idnetify and display all the negitive values from the given record
+//ur program should 1 read an integer representing the number of days 2 read an integer values and store them as array 3 print all the -ve values 4 if there is no -ve value print no -ve value found
+//sample input 1,5 output = noo -ve values
+// sample input 6,4,-1,7
+// #include <stdio.h>
+
+// int main() {
+
+//     int n;
+//     int arr[50];
+//     int found = 0;
+
+//     printf("Enter number of days: ");
+//     scanf("%d", &n);
+
+//     printf("Enter the values:\n");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] < 0) {
+//             printf("%d ", arr[i]);
+//             found = 1;
+//         }
+//     }
+
+//     if (!found) {
+//         printf("No negative values found");
+
+//     }
+
+//     return 0;
+// }
+
+//in a class student marks are stored in 1d array students at even roll number position at index 0,2,4 belong to section a students at Student at odd numbers belong in section B read an enter read an error read in DJ section 1 is equal to calculate the average marks of section 8 section print the average mark bracket integer value. If no student exist the selected section print zero.
+//input format integer n (number of Students) ,2.n integers(marks of students),3 integer value for the section Section 1 equals a section two equals B
+// 5->no of students marks->10 20 30 40 50 Value = 1
+
 #include <stdio.h>
 
-
 int main() {
-    int arr[100], n = 0;
-    int choice, pos, value, i, found;
+    int n, section;
+    
+    printf("Enter number of students: ");
+    scanf("%d", &n);
 
-    do {
-        printf("\n--- MENU ---\n");
-        printf("1. Insert\n");
-        printf("2. Update\n");
-        printf("3. Delete\n");
-        printf("4. Display\n");
-        printf("5. Search\n");
-        printf("6. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+    int arr[n];
 
-        switch(choice) {
+    printf("Enter marks of students:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
 
-            case 1:  // Insert
-                printf("Enter position: ");
-                scanf("%d", &pos);
-                printf("Enter value: ");
-                scanf("%d", &value);
+    printf("Enter section (1 for A, 2 for B): ");
+    scanf("%d", &section);
 
-                if(pos >= 1 && pos <= n+1) {
-                    for(i = n; i >= pos-1; i--)
-                        arr[i+1] = arr[i];
+    int sum = 0, count = 0;
 
-                    arr[pos-1] = value;
-                    n++;
-                } else {
-                    printf("Invalid Position!\n");
-                }
-                break;
-
-            case 2:  // Update
-                printf("Enter position to update: ");
-                scanf("%d", &pos);
-
-                if(pos >= 1 && pos <= n) {
-                    printf("Enter new value: ");
-                    scanf("%d", &arr[pos-1]);
-                } else {
-                    printf("Invalid Position!\n");
-                }
-                break;
-
-            case 3:  // Delete
-                printf("Enter position to delete: ");
-                scanf("%d", &pos);
-
-                if(pos >= 1 && pos <= n) {
-                    for(i = pos-1; i < n-1; i++)
-                        arr[i] = arr[i+1];
-
-                    n--;
-                } else {
-                    printf("Invalid Position!\n");
-                }
-                break;
-
-            case 4:  // Display
-                printf("Array elements: ");
-                for(i = 0; i < n; i++)
-                    printf("%d ", arr[i]);
-                break;
-
-            case 5:  // Search
-                printf("Enter value to search: ");
-                scanf("%d", &value);
-
-                found = 0;
-                for(i = 0; i < n; i++) {
-                    if(arr[i] == value) {
-                        printf("Found at position %d\n", i+1);
-                        found = 1;
-                        break;
-                    }
-                }
-
-                if(!found)
-                    printf("Element not found\n");
-                break;
-
-            case 6:
-                printf("Exiting...\n");
-                break;
-
-            default:
-                printf("Invalid choice!\n");
+    if (section == 1) {   
+        for (int i = 0; i < n; i += 2) {
+            sum += arr[i];
+            count++;
         }
+    }
+    else if (section == 2) {
+        for (int i = 1; i < n; i += 2) {
+            sum += arr[i];
+            count++;
+        }
+    }
 
-    } while(choice != 6);
+    if (count == 0) {
+        printf("0");
+    } else {
+        printf("%d", sum / count);   
+    }
 
     return 0;
 }
