@@ -1018,12 +1018,12 @@
 //     printf("Enter the lucky pair sum: ");
 //     scanf("%d",&sum);
 
-    // int found = 0;
-    // for (int i = 0; i < num1 - 1; i++) {
-    //     for (int j = i + 1; j < num1; j++) {
-    //         if (arr[i] + arr[j] == sum) {
-    //             printf("Lucky pair found: %d, %d\n", arr[i], arr[j]);
-    //             found = 1;
+//     int found = 0;
+//     for (int i = 0; i < num1 - 1; i++) {
+//         for (int j = i + 1; j < num1; j++) {
+//             if (arr[i] + arr[j] == sum) {
+//                 printf("Lucky pair found: %d, %d\n", arr[i], arr[j]);
+//                 found = 1;
 //             }
 //         }
 //     }
@@ -1070,48 +1070,48 @@
 //     return 0;
 // }
 
-//in a class student marks are stored in 1d array students at even roll number position at index 0,2,4 belong to section a students at Student at odd numbers belong in section B read an enter read an error read in DJ section 1 is equal to calculate the average marks of section 8 section print the average mark bracket integer value. If no student exist the selected section print zero.
-//input format integer n (number of Students) ,2.n integers(marks of students),3 integer value for the section Section 1 equals a section two equals B
-// 5->no of students marks->10 20 30 40 50 Value = 1
+// //in a class student marks are stored in 1d array students at even roll number position at index 0,2,4 belong to section a students at Student at odd numbers belong in section B read an enter read an error read in DJ section 1 is equal to calculate the average marks of section 8 section print the average mark bracket integer value. If no student exist the selected section print zero.
+// //input format integer n (number of Students) ,2.n integers(marks of students),3 integer value for the section Section 1 equals a section two equals B
+// // 5->no of students marks->10 20 30 40 50 Value = 1
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int n, section;
+// int main() {
+//     int n, section;
     
-    printf("Enter number of students: ");
-    scanf("%d", &n);
+//     printf("Enter number of students: ");
+//     scanf("%d", &n);
 
-    int arr[n];
+//     int arr[n];
 
-    printf("Enter marks of students:\n");
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
+//     printf("Enter marks of students:\n");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
 
-    printf("Enter section (1 for A, 2 for B): ");
-    scanf("%d", &section);
+//     printf("Enter section (1 for A, 2 for B): ");
+//     scanf("%d", &section);
 
-    int sum = 0, count = 0;
+//     int sum = 0, count = 0;
 
-    if (section == 1) {   
-        for (int i = 0; i < n; i += 2) {
-            sum += arr[i];
-            count++;
-        }
-    }
-    else if (section == 2) {
-        for (int i = 1; i < n; i += 2) {
-            sum += arr[i];
-            count++;
-        }
-    }
+//     if (section == 1) {   
+//         for (int i = 0; i < n; i += 2) {
+//             sum += arr[i];
+//             count++;
+//         }
+//     }
+//     else if (section == 2) { 
+//         for (int i = 1; i < n; i += 2) {
+//             sum += arr[i];
+//             count++;
+//         }
+//     }
 
-    if (count == 0) {
-        printf("0");
-    } else {
-        printf("%d", sum / count);   
-    }
+//     if (count == 0) {
+//         printf("0");
+//     } else {
+//         printf("%d", sum / count);   
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
