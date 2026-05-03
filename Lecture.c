@@ -1115,3 +1115,477 @@
 
 //     return 0;
 // }
+//---------------------------------------------------------------------------------------------------------------Prime number------------------------------------------------------------
+
+// #include <stdio.h>
+// int main(){
+
+// int n;
+// scanf ("%d",&n);
+
+// if (n <= 1) {
+//     printf("Not Prime");
+//     return 0;
+// }
+
+// int isPrime = 1;
+
+// for (int i = 2; i * i <= n; i++) {
+//     if (n % i == 0) {
+//         isPrime = 0;
+//         break;
+//     }
+// }
+
+// if (isPrime)
+//     printf("Prime");
+// else
+//     printf("Not Prime");
+// }
+
+////----------------------------------------------------------------------------------------------------------------Pointers---------------------------------------------------------------------------------------------
+// #include <stdio.h>
+
+// // function to swap values
+// void swap(int *a, int *b)
+// {
+//     int temp;
+//     temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+
+// int main()
+// {
+//     int x, y;
+
+//     printf("Enter two numbers: ");
+//     scanf("%d %d", &x, &y);
+
+//     printf("Before Swap: x = %d, y = %d\n", x, y);
+
+//     swap(&x, &y);  // passing addresses
+
+//     printf("After Swap: x = %d, y = %d\n", x, y);
+
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// // recursive function
+// int factorial(int n) {
+//     if (n == 0 || n == 1)
+//         return 1;
+//     else
+//         return n * factorial(n - 1);
+// }
+
+// int main() {
+//     int x;
+
+//     printf("Enter a number: ");
+//     scanf("%d", &x);
+
+//     int result = factorial(x);
+
+//     printf("Factorial = %d", result);
+
+//     return 0;
+// }
+
+////Incirect recursion
+// #include <stdio.h>
+
+// void odd();
+// void even();
+
+// int n = 1;
+
+// void odd() {
+//     if (n <= 5) {
+//         printf("%d ", n + 1);  // if odd → add 1
+//         n++;
+//         even();                // call even
+//     }
+// }
+
+// void even() {
+//     if (n <= 5) {
+//         printf("%d ", n - 1);  // if even → subtract 1
+//         n++;
+//         odd();                 // call odd
+//     }
+// }
+
+// int main() {
+//     odd();  // start from odd
+//     return 0;
+// }
+
+// ============================================
+// Auto Storage Class Demonstration
+// ============================================
+// The 'auto' keyword declares automatic variables (local variables)
+// 'auto' is the default storage class for local variables
+// These variables are created when entering the block and destroyed when exiting
+
+// #include <stdio.h>
+
+// void autoDemo() {
+//     // 'auto' is optional here - int mount; would work the same
+//     auto int mount;     // explicit auto declaration
+//     auto int month;     // explicit auto declaration
+
+//     mount = 10;
+//     month = 4;
+
+//     printf("Mount value: %d\n", mount);
+//     printf("Month value: %d\n", month);
+
+//     // Demonstrating auto scope - these variables only exist in this function
+//     {
+//         auto int innerVar = 100;  // auto variable in inner block
+//         printf("Inner block variable: %d\n", innerVar);
+//     }  // innerVar is destroyed here
+
+//     // innerVar would not be accessible here (out of scope)
+// }
+
+// int mainAuto() {
+//     printf("=== Auto Storage Class Demo ===\n\n");
+
+//     autoDemo();
+
+//     printf("\n=== Demo Complete ===\n");
+//     return 0;
+// }
+// // To run this: change mainAuto() to main() above
+// #include <stdio.h>
+
+// int main()
+// {
+//     int i;
+//     auto char c;
+//     float f;
+
+//     printf("%d %c %f", i, c, f);
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a = 0;
+
+//     {
+//         int a = 10;
+//         printf("%d", a);
+//         a++;
+
+//         {
+//             a = 20;
+//         }
+
+//         {
+//             printf(" %d", a);
+//             int a = 30;
+//             {
+//                 a++;
+//             }
+//             printf(" %d", a++);
+//         }
+
+//         printf(" %d", a++);
+//     }
+
+//     printf(" %d", a);
+
+//     return 0;
+// }
+// #include <stdio.h>
+// extern int var;  // 'extern' not 'external' - declares var exists elsewhere
+
+// int var = 10;    // definition of var (or remove extern above and just use 'int var;')
+
+// int main(void){
+//     var = 10;
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int x = 21;
+// int main (){
+    
+//     extern int y;
+//     printf("%d%d",x,y);
+//     return 0;
+// }
+// int y = 31;
+
+// #include <stdio.h>
+// void increment();
+// int main (){
+    
+//     increment();
+//     increment();
+//     return 0;
+// }
+// void increment(){
+//     auto int i = 1;
+//     static int j = 1;
+//     i = i+1;
+//     j++;
+//     printf("%d%d\n",i,j);
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int a = 10;
+//     int *p = &a;
+
+//     printf("Value of a = %d\n", a);
+//     printf("Address of a = %p\n", &a);
+//     printf("Pointer p = %p\n", p);
+//     printf("Value using pointer = %d\n", *p);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int i = 3, *j, **k;
+
+//     j = &i;
+//     k = &j;
+
+//     printf("Address of i = %u\n", &i);
+//     printf("Address of i = %u\n", j);
+//     printf("Address of i = %u\n", *k);
+
+//     printf("Address of j = %u\n", &j);
+//     printf("Address of j = %u\n", k);
+
+//     printf("Address of k = %u\n", &k);
+
+//     printf("Value of j = %u\n", j);
+//     printf("Value of k = %u\n", k);
+
+//     printf("Value of i = %d\n", i);
+//     printf("Value of i = %d\n", *(&i));
+//     printf("Value of i = %d\n", *j);
+//     printf("Value of i = %d\n", **k);
+
+//     return 0;
+// }
+// /* Demonstration of call by value */
+// #include <stdio.h>
+
+// void display(int m);
+
+// int main()
+// {
+//     int i;
+//     int marks[] = {55, 65, 75, 56, 78, 78, 90};
+
+//     for (i = 0; i <= 6; i++)
+//     {
+//         display(marks[i]);
+//     }
+
+//     return 0;
+// }
+
+// void display(int m)
+// {
+//     printf("%d ", m);
+// }
+
+// #include <stdio.h>
+
+// void display(int *m);
+
+// int main()
+// {
+//     int i;
+//     int marks[] = {55, 65, 75, 56, 78, 78, 90};
+
+//     for (i = 0; i <= 6; i++)
+//     {
+//         display(&marks[i]);  // passing address
+//     }
+
+//     return 0;
+// }
+
+// void display(int *m)
+// {
+//     printf("%d ", *m);  // dereferencing pointer
+// }
+// #include <stdio.h>
+// int main(){
+//     int a = 10,b= 20,c = 30;
+//     int *p;
+//     p = &a;
+//     printf("Adress of a :%u\n",p);
+//     p++;
+//     printf("(P++):%u\n",p);
+//     p--;
+//     printf("(P--)%u",p);
+//     return 0;
+// }
+// //Decrement p-
+// #include <stdio.h>
+
+// int main() {
+//     int arr[] = {100, 200, 300, 400};
+//     int *p = &arr[3];   // Point to last element
+
+//     printf("Initial Address: %p, Value: %d\n", p, *p);
+
+//     p--;   // Move backward
+//     printf("After p-- Address: %p, Value: %d\n", p, *p);
+
+//     p--;
+//     printf("After second p-- Address: %p, Value: %d\n", p, *p);
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int arr[]={10,20,36,72,45,36};
+//     int *k,*j;
+//     j = &arr[4];
+//     k = (arr+4);
+//     if (j == k)
+//         printf ("The two pinters point to the same location \n");
+//     else
+//         printf("The tow pointers do not point to the same location\n");
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// int main() {
+//     int arr[] = {10, 20, 30, 40, 50};
+//     int n = 5;
+
+//     int *start = arr;
+//     int *end = arr + n - 1;
+
+//     while (start < end) {
+//         int temp = *start;
+//         *start = *end;
+//         *end = temp;
+
+//         start++;
+//         end--;
+//     }
+
+//     printf("Reversed array: ");
+//     for (int i = 0; i < n; i++) {
+//         printf("%d ", arr[i]);
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int* getMax(int *a, int *b) {
+//     if (*a > *b) {
+//         return a;
+//     } else {
+//         return b;
+//     }
+// }
+
+// int main() {
+//     int x = 10, y = 20;
+//     int *max;
+
+//     max = getMax(&x, &y);
+
+//     printf("Maximum: %d\n", *max);
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// union Result {
+//     int marks;
+//     char grade;
+// };
+
+// struct Student {
+//     char name[50];
+//     char type;   // 'M' for Marks, 'G' for Grade
+//     union Result res;
+// };
+
+// int main() {
+//     struct Student s;
+
+//     // Input
+//     scanf("%s", s.name);
+//     scanf(" %c", &s.type);
+
+//     if (s.type == 'M') {
+//         scanf("%d", &s.res.marks);
+//     } else {
+//         scanf(" %c", &s.res.grade);
+//     }
+
+//     // Output
+//     printf("%s\n", s.name);
+
+//     if (s.type == 'M') {
+//         printf("Marks: %d\n", s.res.marks);
+//     } else {
+//         printf("Grade: %c\n", s.res.grade);
+//     }
+
+//     return 0;
+// }
+
+#include <stdio.h>
+
+union Price {
+    float discount;
+    float price;
+};
+
+struct Product {
+    char name[50];
+    char type; // D or R
+    union Price p;
+};
+
+int main() {
+    struct Product pr;
+
+    scanf("%s", pr.name);
+    scanf(" %c", &pr.type);
+
+    if (pr.type == 'D') {
+        scanf("%f", &pr.p.discount);
+    } else {
+        scanf("%f", &pr.p.price);
+    }
+
+    printf("%s ", pr.name);
+
+    if (pr.type == 'D') {
+        printf("Discount: %.2f%%\n", pr.p.discount);
+    } else {
+        printf("Price: %.2f\n", pr.p.price);
+    }
+
+    return 0;
+}        
